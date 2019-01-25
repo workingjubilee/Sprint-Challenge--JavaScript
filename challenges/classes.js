@@ -31,6 +31,12 @@ class CubeMaker extends CuboidMaker {
   constructor(edge) {
     super(edge,edge,edge);
 }
+  cubeArea() {
+    return 6 * Math.pow(this.height,2)
+  }
+  cubeVolume() {
+    return Math.pow(this.height,3)
+  }
 }
 
 const smalls = new CubeMaker(2);
@@ -42,3 +48,8 @@ console.log(smalls.surfaceArea());
 // The formula is 6a^2, where a = one edge dimension (since HLW are identical).
 // so, 6*2^2 = 24, which is the output!
 // no change required, in other words.
+
+console.log(smalls.cubeVolume())
+// just for fun... yes, it is 8.
+console.log(smalls.cubeArea());
+// just for fun... yes, it is 24.
