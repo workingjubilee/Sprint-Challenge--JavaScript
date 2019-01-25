@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.forEach can potentially be a mutating function, which can be considered "destructive" since it eliminates the original data, but .map always returns a new string.
+
 2. What is the difference between a function and a method?
+
+A method is a function that is enclosed in an object and invoked by reference to that object. Many functions used in JavaScript are actually methods of the String, Array, or Object objects, but describing a new function with function() {} is not necessarily.
 
 3. What is closure?
 
+Closures are created by curly brackets in JavaScript, but more importantly they are layers between which data has restricted flow. We use closure to prevent data from "leaking" from a function and accidentally getting into another function which executes, like a cell membrane blocks proteins that could interfere with the cell's operation but has protein-lipid gates which can allow restricted entry and exit.
+
 4. Describe the four rules of the 'this' keyword.
 
+"this" is a very impressionable code snippet that tries to bind to the first thing it "sees". 1) If not placed near anything else, it finds the global environment (window, console, et cetera). "Window binding". 2) If it is placed in an object, it binds to that object, "implicit binding". 3) When a constructor makes a new object, it moves a "this" into the new object, not the constructor.
+
 5. Why do we need super() in an extended class?
+
+super(thing) is the replacement for the .call(this,thing), invocation in other constructors, it allows them to share object properties and properly take on the assigned values.
 
 ## Project Set up
 
@@ -65,11 +75,11 @@ Your finished project must include all of the following requirements:
 **Pro tip for this challenge: If something seems like it isn't working locally, copy and paste your code up to codepen and take another look at the console.**
 
 ## Task 1: Objects and Arrays
-Test your knowledge of objects and arrays. 
+Test your knowledge of objects and arrays.
 * [ ] Use the [objects-arrays.js](challenges/objects-arrays.js) link to get started.  Read the instructions carefully!
 
 ## Task 2: Functions
-This challenge takes a look at callbacks and closures as well as scope. 
+This challenge takes a look at callbacks and closures as well as scope.
 * [ ] Use the [functions.js](challenges/functions.js) link to get started. Read the instructions carefully!
 
 ## Task 3: Prototypes
